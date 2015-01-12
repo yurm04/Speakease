@@ -1,0 +1,98 @@
+/* Contains site defaults and UI styling */
+
+@import 'colors';
+@import 'fonts';
+@import 'home';
+
+//////////////////
+// HEADER & NAV //
+//////////////////
+
+.logo {
+  max-width: 200px;
+  max-height: 200px;
+}
+
+header {
+  background-color: $powder-blue;
+  text-align: center;
+  padding: 2em 0;
+  border-bottom: .5em solid #fff;
+//  .logo {
+//    margin: 1em 0;
+//  }
+}
+
+nav {
+  text-align: center;
+  ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    li {
+      display: inline;
+      color: $whitesmoke;
+      &:last-child:after { 
+        content: ''; 
+        padding-right: 0;
+      }
+      &:after {
+        content: '~';
+        padding: 0 1.5em;
+      }
+      a {
+        color: $whitesmoke;
+        &:hover {
+          color: $coral;
+        }
+      }
+    }
+    
+  }
+}
+
+a {
+  text-decoration: none;
+}
+
+/////////////
+// BUTTONS //
+/////////////
+
+.button {
+  width: 10em;
+  height: 3em;
+  background: $coral;
+  color: $whitesmoke;
+  border: .15em solid $coral;
+  padding: .5em 1em;
+  line-height: 1.5em;
+  margin: 1em auto;
+  display: block;
+  text-align: center;
+  border-radius: .3em;
+  -webkit-border-radius: .3em;
+  -moz-border-radius: .3em;
+  &:hover {
+    color: $whitesmoke;
+    border-color: $light-coral;
+    background: $light-coral;
+  }
+}
+
+/////////////
+// ALLIGNS //
+/////////////
+
+.center {
+  text-align: center;
+}
+
+//////////
+// MISC //
+//////////
+
+hr {
+  display: block;
+  border-width: .5em;
+}

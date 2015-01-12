@@ -1,0 +1,98 @@
+// Color Variables
+$white       : #f9f9f9;
+$grey        : #7d7d7d;
+$light-grey   : #ccc;
+$powder-blue : #9cc;
+$sea-blue    : #b5ecdf;
+$coral       : #f56f59;
+$light-coral : #f4867a;
+$yellowgreen : #80bd00;
+$whitesmoke  : #ececec;
+$dark-blue   : #32505F;
+$pink        : #FF4771;
+$red         : #C85B60;
+
+
+.color-white {
+    color: $white;
+}
+
+.bg-white {
+  background: $white;
+}
+
+.color-grey {
+    color: $grey;
+}
+
+.bg-grey {
+  background: $grey;
+}
+
+.color-light-grey {
+  color: $light-grey;
+}
+
+.bg-light-grey {
+  background: $light-grey;
+}
+
+.color-powder-blue {
+    color: $powder-blue;
+}
+
+.bg-powder-blue {
+  background: $powder-blue;
+}
+
+.color-sea-blue {
+    color: $sea-blue;
+}
+
+bg-sea-blue {
+  background: $sea-blue;
+}
+
+.color-coral {
+    color: $coral;
+}
+
+.bg-coral {
+  background: $coral;
+}
+
+.color-yellowgreen {
+    color: $yellowgreen;
+}
+
+.color-whitesmoke {
+    color: $whitesmoke;
+}
+
+.bg-whitesmoke {
+  background: $whitesmoke;
+}
+
+.color-dark-blue {
+    color: $dark-blue;
+}
+
+.bg-dark-blue {
+  background: $dark-blue;
+}
+
+.color-pink {
+    color: $pink;
+}
+
+.bg-pink {
+  background: $pink;
+}
+
+.color-red {
+    color: $red;
+}
+
+.bg-red {
+  background: $pink;
+}

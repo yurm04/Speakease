@@ -1,0 +1,138 @@
+/////////////////////
+// Responsive Grid //
+/////////////////////
+
+// Setting things that make sense
+*, *:before, *:after {
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  background-repeat: no-repeat;
+  position: relative;
+  vertical-align: middle;
+}
+
+/* Attribute selector for normalizing grid bits */
+[class*='block-'] {
+  float: left;
+  padding: 10px;
+}
+
+/* Floats last ".bit-" to the right */
+[class*='block-']:last-of-type {
+  padding-right: 10px;
+  float: right;
+}
+ 
+/* Clearfix */
+.frame:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+.container {
+  margin: 0 auto;
+  max-width: 1200px;
+}
+
+/////////////////
+// GRID BLOCKS //
+/////////////////
+
+.block {
+  float: left;
+  padding: 1em;
+  // Last block floats to the right
+  &:last-of-type {
+    padding-right: 1em;
+    float: right;
+  }
+  // Responsive images
+  & > img {
+    max-width: 100%;
+    height: auto;
+  }
+  // Blocks
+  &.one {
+    width: 100%;
+    padding-right: 0;
+    float: none;
+  }
+  &.two    {width: 50%;}
+  &.three  {width: 33.33%;}
+  &.four   {width: 25%;}
+  &.five   {width: 20%;}
+  &.six    {width: 16.6666666667%;}
+  &.seven  {width: 14.2857142857%;}
+  &.eight  {width: 12.5%;}
+  &.nine   {width: 11.1111111111%;}
+  &.ten    {width: 10%;}
+  &.eleven {width: 9.09090909091%;}
+  &.twelve {width: 8.33%;}
+}
+
+///////////////////
+// MEDIA QUERIES //
+///////////////////
+
+// Largeish screens
+@media (min-width: 800px) and (max-width: 1100px) {
+  .block {
+    // Switch to full
+    &.two,
+    &.seven  {
+      width: 100%; 
+    }
+    // Switch to half
+    &.four,
+    &.eight,
+    &.ten,
+    &.twelve { 
+      width: 50%; 
+    }
+  }
+}
+
+// Mediumish screens
+@media (max-width: 800px) {
+  .block {
+    &.one,
+    &.two,
+    &.three,
+    &.five,
+    &.seven,
+    &.nine,
+    &.eleven {
+      width: 100%;
+    }
+    // Switch to half
+    &.four,
+    &.six,
+    &.eight,
+    &.ten,
+    &.twelve {
+      width: 50%;
+    }
+  }
+}
+
+// Small screens full blocks
+@media (max-width: 480px) {
+  .block {
+    &.one,
+    &.two,
+    &.three,
+    &.four,
+    &.five,
+    &.six,
+    &.seven,
+    &.eight,
+    &.nine,
+    &.ten,
+    &.eleven,
+    &.twelve {
+      width: 100%;
+    }
+  }
+}
